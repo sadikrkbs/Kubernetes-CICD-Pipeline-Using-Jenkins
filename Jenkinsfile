@@ -92,9 +92,9 @@ pipeline {
                 script {
                     def status = currentBuild.currentResult
                     if (status == "SUCCESS") {
-                        slackSend channel: '#your-slack-channel', color: 'good', message: "Pipeline successfully completed! :white_check_mark:", tokenCredentialId: 'slack-token'
+                        slackSend channel: '#devops', color: 'good', message: "Pipeline successfully completed! :white_check_mark:", tokenCredentialId: 'slack-token'
                     } else {
-                        slackSend channel: '#your-slack-channel', color: 'danger', message: "Pipeline failed! :x:", tokenCredentialId: 'slack-token'
+                        slackSend channel: '#devops', color: 'danger', message: "Pipeline failed! :x:", tokenCredentialId: 'slack-token'
                     }
                 }
             }
