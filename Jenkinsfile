@@ -16,7 +16,7 @@ pipeline{
             APP_NAME = "kubernetes-cicd-jenkins"
             JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN"
 
-        }
+    }
     stages{
         stage("Cleanup Workspace"){
             steps {
